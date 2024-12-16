@@ -7,10 +7,12 @@
 body {
     padding: 0;
     margin: 0;
-    background-image: url("https://img.freepik.com/vector-gratis/fondo-degradado-oropel-navidad_52683-76117.jpg");
+    background: #eeeeee;
 }
 
 header {
-    padding: 20px;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
     backdrop-filter: blur(20px);
 }
