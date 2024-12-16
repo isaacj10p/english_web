@@ -3,6 +3,6 @@
     flex-direction: column;
 }
 
-.article-image img {
+img.article-image {
     width: 750px !important;
 }
