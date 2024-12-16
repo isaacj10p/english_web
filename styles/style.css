@@ -70,14 +70,14 @@ section#articles {
     background: #e2e2e2;
     border-radius: 10px;
     cursor: pointer;
-    transition: all .4s;
+    transition: all .3s;
 }
 
 .article-item:hover {
     -webkit-box-shadow: 0px 0px 20px -11px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 20px -11px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 20px -11px rgba(0,0,0,0.75);
-    transition: all .4s;
+    transition: all .3s;
 }
 
 .article-item:hover a.article-link {
