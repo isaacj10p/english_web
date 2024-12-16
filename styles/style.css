@@ -12,12 +12,21 @@ body {
 
 header {
     top: 0 !important;
-    padding: 10px 20px;
+    padding: 20px;
     position: fixed;
     width: 100%;
     backdrop-filter: blur(20px);
 }
 
+header h1 {
+    padding: 0;
+    margin: 0;
+}
+
 #title-section {
-    margin-top: 25px !important;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
