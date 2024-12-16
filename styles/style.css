@@ -67,17 +67,17 @@ section#articles {
 
 .article-item {
     width: 325px;
-    min-height: 450px;
     background: #e2e2e2;
     border-radius: 10px;
+    cursor: pointer;
 }
 
-.article-item:hover {
-
+.article-item:hover a.article-link {
+    text-decoration: underline;
 }
 
 .article-text-content {
-    margin: 7px;
+    margin: 12px;
 }
 
 .article-preview {
