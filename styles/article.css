@@ -6,3 +6,8 @@
 img.article-image {
     width: 750px !important;
 }
+
+p#article-date {
+    color: #333;
+    font-weight: 300;
+}
