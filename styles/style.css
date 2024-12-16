@@ -56,9 +56,15 @@ h2.subtitle {
     transition: all .4s;
 }
 
+section#articles {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .article-item {
-    width: 50px;
-    height: 100px;
+    width: 200px;
+    height: 450px;
     background: #e2e2e2;
     border-radius: 10px;
 }
