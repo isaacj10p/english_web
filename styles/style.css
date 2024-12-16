@@ -18,6 +18,12 @@ header {
     backdrop-filter: blur(20px);
 }
 
+#logo-href {
+    text-decoration: none !important;
+    color: black !important;
+    font-size: 2em;
+    font-weight: bold;
+}
 footer {
     background-color: #333;
     padding: 20px;
