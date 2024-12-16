@@ -18,7 +18,7 @@ header {
     backdrop-filter: blur(20px);
 }
 
-header h1 {
+h1 {
     padding: 0;
     margin: 0;
 }
@@ -29,4 +29,17 @@ header h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.button {
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    border-radius: 7px;
+    transition: all .4s;
+}
+
+.button:hover {
+    background-color: #444;
+    transition: all .4s;
 }
