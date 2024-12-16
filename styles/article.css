@@ -14,3 +14,22 @@ p#article-date {
     color: #333;
     font-weight: 300;
 }
+
+a#home-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 1.15em;
+    margin-bottom: 20px;
+}
+
+a#home-button:hover {
+    text-decoration: underline;
+}
+
+img.article-image {
+    border-radius: 10px !important;
+    margin-bottom: 10px;
+}
