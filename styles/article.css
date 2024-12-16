@@ -3,7 +3,6 @@
     flex-direction: column;
 }
 
-body {
-    text-align: center;
-    justify-content: center;
+.article-image img {
+    width: 150px;
 }
