@@ -11,8 +11,13 @@ body {
 }
 
 header {
+    top: 0 !important;
     padding: 10px 20px;
     position: fixed;
     width: 100%;
     backdrop-filter: blur(20px);
+}
+
+#title-section {
+    margin-top: 25px !important;
 }
