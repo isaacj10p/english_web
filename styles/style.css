@@ -73,5 +73,14 @@ section#articles {
 }
 
 .article-item:hover {
-    
+
+}
+
+.article-text-content {
+    margin: 7px;
+}
+
+img.article-image {
+    width: 100%;
+    border-radius: 10px 0;
 }
