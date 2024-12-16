@@ -3,10 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Kings Parade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            background-color: yellow;
+            color: black;
+            font-weight: bold;
+        }
+
+        .meme-pointer {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 50%;
+            transition: transform 0.5s ease, left 0.5s ease, top 0.5s ease;
+        }
+
+        @keyframes circular-motion {
+            0% {
+                transform: translate(-10px, -10px);
+            }
+            25% {
+                transform: translate(10px, -10px);
+            }
+            50% {
+                transform: translate(10px, 10px);
+            }
+            75% {
+                transform: translate(-10px, 10px);
+            }
+            100% {
+                transform: translate(-10px, -10px);
+            }
+        }
+
+        .circular {
+            animation: circular-motion 1s infinite;
+        }
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gandia Christmas Tips</title>
     <link rel="stylesheet" href="../styles/article.css">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <style>
+        /* Estilo para los memes */
+        .meme {
+            position: fixed;
+            opacity: 0.1; /* Opacidad baja para que no sean tan notorios */
+            z-index: 9999;
+            pointer-events: none; /* Evita que interfieran con clics */
+            width: 150px; /* Tamaño de los memes */
+            animation: fade 10s linear infinite;
+        }
+
+        /* Animación de desvanecimiento */
+        @keyframes fade {
+            0%, 100% {
+                opacity: 0.1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        /* Palabra resaltada */
+        .highlight {
+            background-color: yellow;
+            color: black;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,22 +99,90 @@
             <h2 class="article-subtitle"></h2>
         </section>
         <section id="body">
-            <section id="title">
-                <h1 class="article-title">Three Kings Parade</h1>
-                <h2 class="article-subtitle"></h2>
-            </section>
-            <p>Music, dance, floats, and fantasy characters will welcome Santa Claus on one of the most magical nights of the year.<p>
-            <p id="article-date">📅 Tuesday, December 24
-                🕔 5:45 PM</p>
+            <p>Music, dance, floats, and fantasy characters will welcome Santa Claus on one of the most magical nights of the year.</p>
+            <p id="article-date">📅 Tuesday, December 24 🕔 5:45 PM</p>
             <img class="article-image" src="https://somgandia.com/wp-content/uploads/2024/01/cabalgata-Reyes-Magos-Gandia.jpg" alt="Imagen prueba">
             <h1 class="article-title">Three Kings Parade</h1>
             <p>The Three Wise Men will arrive in Gandia, as they do every year, to deliver gifts to all children after a spectacular parade through the city.</p>
-            <p id="article-date">📅 Sunday, January 5
-                🕔 5:50 PM</p>
+            <p id="article-date">📅 Sunday, January 5 🕔 5:50 PM</p>
         </section>  
     </main>
     <footer>
         <p>&copy; Hecho con cariñito por Pablo, Lucía, Perriso e Isaac</p>
     </footer>
+
+    <!-- Meme Pointers -->
+    <img class="meme-pointer" id="meme1" src="https://yt3.ggpht.com/ytc/AKedOLTJ7afAY_0867lAF750amaT7TuqjqhUnk6aFNRKRw=s900-c-k-c0x00ffffff-no-rj" alt="Meme 1">
+    <img class="meme-pointer" id="meme2" src="https://preview.redd.it/cero4ltfuqf41.jpg?width=640&crop=smart&auto=webp&s=83e1f5d07dd1e2ea8e7e87632669bcc851718424" alt="Meme 2">
+    <img class="meme-pointer" id="meme3" src="https://i.postimg.cc/Bv7wWC7B/image.png" alt="Meme 3">
+
+    <script>
+                document.addEventListener('DOMContentLoaded', function() {
+            // Crear un elemento de audio
+            var audio = new Audio('https://www.myinstants.com/media/sounds/felipe-franco-bambam-ta-saindo-da-jaula-o-monstro-porra.mp3');
+
+            // Reproducir el audio
+            audio.play().catch(function(error) {
+                console.log("Error al intentar reproducir el audio: " + error);
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const memes = [
+                document.getElementById('meme1'),
+                document.getElementById('meme2'),
+                document.getElementById('meme3')
+            ];
+            const paragraphs = document.querySelectorAll('p');
+
+            function getRandomWordPosition() {
+                // Select a random paragraph
+                const randomParagraph = paragraphs[Math.floor(Math.random() * paragraphs.length)];
+                const words = randomParagraph.textContent.split(' ');
+                const randomWordIndex = Math.floor(Math.random() * words.length);
+
+                // Highlight the word
+                randomParagraph.innerHTML = words.map((word, index) => {
+                    return index === randomWordIndex
+                        ? `<span class='highlight'>${word}</span>`
+                        : word;
+                }).join(' ');
+
+                // Get the position of the highlighted word
+                const highlightedWord = document.querySelector('.highlight');
+                const rect = highlightedWord.getBoundingClientRect();
+
+                return {
+                    x: rect.left + window.scrollX,
+                    y: rect.top + window.scrollY
+                };
+            }
+
+            function movePointerToWord() {
+                const position = getRandomWordPosition();
+                const randomMeme = memes[Math.floor(Math.random() * memes.length)];
+
+                // Reset all memes
+                memes.forEach(meme => {
+                    meme.style.display = 'none';
+                });
+
+                // Activate the selected meme
+                randomMeme.style.display = 'block';
+                randomMeme.style.left = `${position.x}px`;
+                randomMeme.style.top = `${position.y}px`;
+
+                // Add circular animation
+                randomMeme.classList.add('circular');
+
+                // Remove the animation after some time
+                setTimeout(() => {
+                    randomMeme.classList.remove('circular');
+                }, 2000);
+            }
+
+            // Repeat the process every few seconds
+            setInterval(movePointerToWord, 3000);
+        });
+    </script>
 </body>
 </html>

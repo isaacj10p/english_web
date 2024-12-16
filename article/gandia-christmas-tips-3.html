@@ -37,5 +37,16 @@
     <footer>
         <p>&copy; Hecho con cariñito por Pablo, Lucía, Perriso e Isaac</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Crear un elemento de audio
+            var audio = new Audio('https://www.myinstants.com/media/sounds/flashbanggg.mp3');
+
+            // Reproducir el audio
+            audio.play().catch(function(error) {
+                console.log("Error al intentar reproducir el audio: " + error);
+            });
+        });
+    </script>
 </body>
 </html>
