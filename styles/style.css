@@ -15,7 +15,7 @@ header {
     padding: 20px;
     position: fixed;
     width: 100%;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
 }
 
 #logo-href {
@@ -52,6 +52,8 @@ h2.subtitle {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIv7gnsZJ2R2G8H8Rdpsz1IUqlgMc78mlbSFC_z3qMH6boAefkshFpgTm8RVVFwX-6ZeLU4CrSuD9FXmW__bx66-M5EVP8dyxglPtBk875ZpY3KMJOwfy6FagT7A3L_rjK5QHqV_FiqzA/s1600/Carretera+entre+la+nieve-SNOW.gif");
+    background-size: cover;
 }
 
 .button {
@@ -76,7 +78,7 @@ section#articles {
     padding: 0 5px;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 20px;
+    margin: 20px 0 20px;
 }
 
 .article-item {
