@@ -66,8 +66,8 @@ section#articles {
 }
 
 .article-item {
-    width: 250px;
-    min-height: 350px;
+    width: 325px;
+    min-height: 450px;
     background: #e2e2e2;
     border-radius: 10px;
 }
@@ -80,7 +80,11 @@ section#articles {
     margin: 7px;
 }
 
+.article-preview {
+    color: gray;
+}
+
 img.article-image {
     width: 100%;
-    border-radius: 10px 0;
+    border-radius: 10px 10px 0 0;
 }
